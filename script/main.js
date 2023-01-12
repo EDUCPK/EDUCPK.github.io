@@ -1,4 +1,4 @@
-//LAODER
+//loader
 var loader = document.querySelector(".loader")
 
 window.addEventListener("load", vanish);
