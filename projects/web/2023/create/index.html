@@ -31,13 +31,41 @@
             border: none;
             height:50px;
         }
+        #nav{
+            justify-content: center;
+            justify-items: space-between;
+            padding-left: 25%;
+        }
+        #Name{
+            margin-right: 25%;
+            height:20px;
+        }
     </style>
+    
     <!--NAVE-BAR-->
     <nav class="CPK-template-element-nav">
         <a href="https://educpk.github.io/" class="CPK-template-element-a" id="home">Home</a>
         <a href="https://educpk.github.io/#about" class="CPK-template-element-a">About</a>
         <a href="https://EDUCPK.github.io/projects/web/2023/create/" class="CPK-template-element-a">Web</a>
         <a href="https://EDUCPK.github.io/projects/app/2023/create/" class="CPK-template-element-a">App</a>
+    </nav>
+    <nav class="CPK-template-element-nav" id="nav">
+        <input type="text" id="Name" value="Untitled-1" placeholder="File name">
+        <script>
+            function copy(){
+                let text = document.getElementById("textarea-id").value;
+                const textbox = document.createElement('textarea');
+                textbox.setAttribute('readonly', '');
+                textbox.style.position= 'asolute', '';
+                textbox.value = text
+        
+                document.body.appendChild(textbox);
+                textbox.select();
+                document.execCommand('copy');
+                textbox.parentNode.removeChild(textbox)
+            }
+        </script>
+        <button onclick="copy()" style="font-size:large; padding: 5px;">Copy code</button>
     </nav>
     <script src="https://educpk.github.io/script/2023/web/script.js"></script>
     <div class="empty">

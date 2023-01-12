@@ -18,7 +18,7 @@ function Start(){
 
 }
 function Download(){
-    name = prompt("Title")
+    name = document.getElementById('Name')
 
     const content = document.getElementById("textarea-id").value;
     const element = document.createElement('a');
