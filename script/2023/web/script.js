@@ -18,7 +18,7 @@ function Start(){
 
 }
 function Download(){
-    name = document.getElementById('Name')
+    name = document.getElementById('Name').value;
 
     const content = document.getElementById("textarea-id").value;
     const element = document.createElement('a');
