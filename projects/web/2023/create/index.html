@@ -73,7 +73,7 @@
             }
         </script>
         <button onclick="copy()" style="font-size:large; padding: 5px;">Copy code</button>
-        <select name="" id="version">
+        <select name="" id="version" onChange="window.open(this.options[this.selectedIndex].value)">
 
             <option value="nothing" selected="selected">Version 2023</option>
             <option value="https://educpk.github.io/projects/web/Version2/create/">Version 2</option>
