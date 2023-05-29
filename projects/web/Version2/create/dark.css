@@ -1,0 +1,45 @@
+body{position: relative;    background-color: rgb(13, 68, 116);
+}
+.empty{
+    display: flex;
+}
+.empty .btn{
+    background-color: rgb(13, 68, 116);
+    width:50%;
+    height:100vh;
+    position: sticky;
+    top:0px;
+    left:50%;
+    
+}
+.CPK-template-element-nav, .CPK-template-element-nav a{
+    background-color: rgb(13, 68, 116);
+    color:white;
+}
+.btn button{
+    margin-top:10%;
+    width:50%;
+    border: none;
+    height:50px;
+    margin-left: 10%;
+}
+#nav{
+    justify-content: center;
+    justify-items: space-between;
+    padding-left: 2%;
+}
+#Name{
+    margin-right: 50px;
+    height:20px;
+}
+#version{
+    margin-left: 50px;
+    font-size: x-large;
+
+}
+textarea{
+    background-color: rgb(10, 51, 87);
+    color:white;
+    border:5px;
+}
+button{cursor: pointer;}

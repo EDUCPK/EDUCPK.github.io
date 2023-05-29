@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://educpk.github.io/image (1).png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://educpk.github.io/style/style.css">
+    <title>CPK | web</title>
+
+</head>
+
+<body>
+    <script src="./script.js"></script>
+    <div class="loader">
+        <img src="https:/EDUCPK.github.io/projects/img/load-gif.gif" alt="" srcset="">
+    </div>
+    <script>
+        sessionStorage.setItem('screen', 'min')
+        
+        if (localStorage.getItem('mode')==""){
+            localStorage.setItem('mode', 'dark')
+        }
+        const s = localStorage.getItem('mode')
+        
+        if (s =="dark") {
+
+            var head = document.getElementsByTagName('head')[0];
+            var link = document.createElement('link');
+            link.id = 'dark';
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = './dark.css';
+            link.media = 'all';
+            head.appendChild(link);
+           
+
+
+        }else{
+            var head = document.getElementsByTagName('head')[0];
+            var link = document.createElement('link');
+            link.id = 'light';
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = './light.css';
+            link.media = 'all';
+            head.appendChild(link);
+
+
+
+        }
+        
+    </script>
+    <!--NAVE-BAR-->
+    
+    <nav class="CPK-template-element-nav">
+        <a href="https://educpk.github.io/" class="CPK-template-element-a" id="home">Home</a>
+        <a href="https://educpk.github.io/#about" class="CPK-template-element-a">About</a>
+        <a href="https://EDUCPK.github.io/projects/web/2023/create/" class="CPK-template-element-a">Web</a>
+
+    </nav>
+    <nav class="CPK-template-element-nav" id="nav" style="display: flex;">
+        <button style="margin-right: 20%;" onclick="short()">Keyboard shortcut</button>
+
+        <div class="mode" style="margin-right: 0;  padding:10px;">
+
+            <style>
+                input[type="checkbox"] {
+                    position: relative;
+                    height: 18px;
+                    width: 36px;
+                    -webkit-appearance: none;
+                    background-color: #424141;
+                    outline: none;
+                    cursor: pointer;
+                    border-radius: 20px;
+                    box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
+                    transition: .5s;
+                }
+
+                input[type="checkbox"]::before {
+                    content: '';
+                    position: absolute;
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 20px;
+                    top: 0;
+                    left: 0;
+                    transform: scale(.85);
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+                    background: linear-gradient(#fff, #f2f2f2, #e6e6e6, #d9d9d9);
+                    transition: .5s;
+                }
+
+                input:checked[type="checkbox"] {
+                    background-color: #387cfa;
+                }
+
+                input:checked[type="checkbox"]::before {
+                    left: 18px;
+                }
+
+                .box-group {
+                    position: absolute;
+                    top: 65px;
+                    left: 200px;
+                }
+
+                .box-group .box2 {
+                    margin-top: 20px;
+                }
+
+                .box-group {
+                    display: flex;
+                }
+            </style>
+            <div class="box_group">
+                <div class="flex" style="display:-webkit-flex ;">
+                    
+                    <p id="mode_p" style="margin-right: 5px;"></p><input type="checkbox" id="box">
+                </div>
+
+                <script>
+                    const check = document.getElementById("box")
+                    check.addEventListener('click', ()=>{
+                        if (check.checked){
+                            localStorage.setItem('mode', 'dark');
+                            window.location.reload();
+                        }else{
+                            localStorage.setItem('mode', 'light');
+                            window.location.reload();
+                        };
+                    })
+
+                    if (s == "dark") {
+                        var mode = "Dark mode";
+                        check.checked = true;
+
+
+
+                    }
+                    else{
+                        var mode = "Light mode"
+                    }
+                    const p = document.querySelector('p');
+                    p.innerText = mode
+                    console.log(p)
+                </script>
+
+
+            </div>
+        </div>
+        <div class="part2">
+            <input type="text" id="Name" value="Untitled-1" placeholder="File name">
+
+            <script>
+                function copy() {
+                    let text = document.getElementById("textarea-id").value;
+                    const textbox = document.createElement('textarea');
+                    textbox.setAttribute('readonly', '');
+                    textbox.style.position = 'asolute', '';
+                    textbox.value = text
+
+                    document.body.appendChild(textbox);
+                    textbox.select();
+                    document.execCommand('copy');
+                    textbox.parentNode.removeChild(textbox)
+                }
+            </script>
+            <button onclick="copy()" style="font-size:large; padding: 5px;">Copy code</button>
+
+            <select name="" id="version">
+
+                <option value="nothing" selected="selected">Version 2</option>
+                <option value="https://educpk.github.io/projects/web/2023/create/">Version 2023</option>
+
+            </select>
+            <script>
+                const v = document.getElementById("version");
+                v.onchange = function () {
+                    var op = this.options[this.selectedIndex].value;
+                    if (op.value != "nothing") {
+                        window.location.replace(op)
+                    }
+                }
+            </script>
+        </div>
+
+    </nav>
+    
+    <div class="empty" id="empty">
+
+        <textarea name="" id="textarea-id" rows="2" cols="100"></textarea>
+        <script>
+            const text = document.getElementById("textarea-id");
+            text.value = localStorage.getItem('code');
+            function store() {
+                localStorage.clear();
+                localStorage.setItem('code', text.value);
+            };
+            text.onkeyup = () => store();
+        </script>
+        <div class="btn">
+            <button onclick="Reset()">Reset</button>
+            <button onclick="Start()">Start</button>
+            <button onclick="Download()">Download</button>
+            
+        </div>
+        
+
+    </div>
+    
+
+    <style>
+        .box{
+            visibility: hidden;
+            position: fixed;
+            top:35%;
+            left: 45%;
+            border-radius: 5%;
+            color: white;
+            background-color: dimgray;
+            padding: 20px;
+        }
+        
+    </style>
+    <!--Shortcuts-->
+    <div class="keypad box" id="shortcuts">
+        <h1>Shortcuts</h1>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Shortcut</th>
+            </tr>
+            <tr>
+                <td>Open/close shortcuts </td>
+                <td>Shift + O</td>
+            </tr>
+            <tr>
+                <td>Download</td>
+                <td>Shift + D</td>
+                
+            </tr>
+            <tr>
+                <td>Reset</td>
+                <td>Shift + R</td>
+            </tr>
+            <tr>
+                <td>Start</td>
+                <td>Shift + S</td>
+            </tr>
+            <tr>
+                <td>Copy</td>
+                <td>Shift + C</td>
+            </tr>
+            <tr>
+                <td>Full screen</td>
+                <td>Shift + F</td>
+            </tr>
+            
+        </table>
+    </div>
+    <script>
+        function short(){
+            const d = document.getElementById("shortcuts");
+            if (d.style.visibility =="hidden"){
+                d.style.visibility="visible";
+            }else{
+                d.style.visibility="hidden";
+            }
+            
+        }
+        function Fullscreen(){
+            var ss = sessionStorage.getItem('screen')
+            var docElm = document.documentElement;
+            console.log(ss)
+            if (ss=='min'){
+                if (docElm.requestFullscreen) {
+                    docElm.requestFullscreen();
+                } else if (docElm.mozRequestFullScreen) {
+                    docElm.mozRequestFullScreen();
+                } else if (docElm.webkitRequestFullScreen) {
+                    docElm.webkitRequestFullScreen();
+                } else if (docElm.msRequestFullscreen) {
+                    docElm.msRequestFullscreen();
+                }
+                sessionStorage.setItem('screen', 'max')
+                var ss = sessionStorage.getItem('screen')
+            }else{
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                }
+                sessionStorage.setItem('screen', 'min')
+                var ss = sessionStorage.getItem('screen')
+            }
+            
+            
+        }
+       
+        document.addEventListener('keydown', e=>{
+            
+            console.log(e)
+            if(e.key.toLowerCase() ==="d" && e.shiftKey){
+                Download();
+                document.getElementById("shortcuts").style.visibility="hidden";
+            }else{
+                if(e.key.toLowerCase()==="r" &&e.shiftKey){
+                    Reset();
+                    document.getElementById("shortcuts").style.visibility="hidden";
+                }else{
+                    if(e.key.toLowerCase()==="s" &&e.shiftKey){
+                        Start();
+                        document.getElementById("shortcuts").style.visibility="hidden";
+                    }else{
+                        
+                        if(e.key.toLowerCase()==="c" &&e.shiftKey){
+                            copy();
+                            document.getElementById("shortcuts").style.visibility="hidden";
+                        }else{
+                            if(e.key.toLowerCase()==="o" &&e.shiftKey){
+                                short()
+                                
+                            }else{
+                                if(e.key.toLowerCase()==="f" &&e.shiftKey){
+                                    Fullscreen();
+                                    document.getElementById("shortcuts").style.visibility="hidden";
+                                }else{
+                                    if(e.key.toLowerCase()=="escape"){
+                                        document.getElementById("shortcuts").style.visibility="hidden";
+                                    }else{
+                                        if (er.style.visibility =="hidden"){
+                                            er.style.visibility="visible";
+                                        }else{
+                                            er.style.visibility="hidden";
+                                        }
+                                        document.getElementById("shortcuts").style.visibility="hidden";
+                                        
+                                    }
+                                    
+                                    
+
+                                };
+                            }
+                            
+
+                        };
+
+                    };
+                };
+            };
+
+        })
+    </script>
+    <script src="https://educpk.github.io/script/main.js"></script>
+
+
+</body>
+
+</html>

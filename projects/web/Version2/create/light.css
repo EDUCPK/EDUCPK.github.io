@@ -1,0 +1,36 @@
+body{position: relative;
+    background-color: rgb(149, 200, 246);
+}
+.empty{
+    display: flex;
+}
+.empty .btn{
+    background-color: rgb(149, 200, 246);
+    width:50%;
+    height:100vh;
+    position: sticky;
+    top:0px;
+    left:50%;
+}
+.btn button{
+    margin:10%;
+    width:50%;
+    
+    border: none;
+    height:50px;
+}
+#nav{
+    justify-content: center;
+    justify-items: space-between;
+    padding-left: 2%;
+}
+#Name{
+    margin-right: 50px;
+    height:20px;
+}
+#version{
+    margin-left: 50px;
+    font-size: large;
+
+}
+button{cursor: pointer;}
