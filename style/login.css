@@ -1,0 +1,236 @@
+.CPK-template-element-nav{
+    background-color: lightblue;
+    height: 50px;
+    display: flex;
+}
+.CPK-template-element-a{
+    color:black;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 25px;
+    
+}
+.login-button {
+    background-color: #4CAF50; /* Green background color */
+    border: none; /* Remove borders */
+    color: white; /* White text color */
+    text-align: center; /* Center text */
+    display: inline-block; /* Make it an inline element */
+    font-size: 16px; /* Font size */
+    transition-duration: 0.4s; /* Transition effect duration */
+    cursor: pointer; /* Add cursor on hover */
+    text-decoration: none; /* Remove underline */
+    margin-left: 20%;
+    cursor: pointer;
+    width: 200px
+  }
+  
+  .login-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
+  .login-button:active {
+    background-color: #3e8e41; /* Dark green on click */
+  }
+
+
+  .form-container {
+    margin: 0 auto; /* Center the form container horizontally */
+    padding: 20px; /* Add some padding */
+
+  }
+  
+  .form-container h2 {
+    text-align: center; /* Center the heading */
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    display: flex; /* Add some spacing between form groups */
+  }
+  
+  .form-group label {
+    display: block; /* Display labels as blocks */
+    font-weight: bold; /* Bold label text */
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="password"],
+  .form-group input[type="email"] {
+    width: 80%; /* Set the input width to 100% */
+    padding: 10px; /* Add some padding */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 4px; /* Add border radius */
+  }
+  
+  .form-group button {
+    background-color: #4CAF50; /* Green background color */
+    border: none; /* Remove borders */
+    color: white; /* White text color */
+    text-align: center; /* Center text */
+    display: inline-block; /* Make it an inline element */
+    font-size: 16px; /* Font size */
+    padding: 10px 24px; /* Padding */
+    transition-duration: 0.4s; /* Transition effect duration */
+    cursor: pointer; /* Add cursor on hover */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .form-group button:hover, .dropdown-list li:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
+  .form-group button:active {
+    background-color: #3e8e41; /* Dark green on click */
+  }
+  #registerform, #loginform{
+    background-color: #f2f2f2; /* Light gray background color */
+    border: 1px solid #ccc; /* Add a border */
+    width:100%;
+  }
+  #registerform{margin-left: 10%;}
+  .swal2-popup{
+    width: 100% !important;
+  }
+  .error{
+    background-color: rgba(255, 0, 0, 0.212);
+    width:50%;
+    margin-left: 25%;
+    visibility: hidden;
+  }
+  .dropdown {
+  position: relative;
+  display: inline-block;
+  width:100%;
+}
+
+
+
+.dropdown-list {
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #54c758;
+  border-top: none;
+  display: none;
+  width: 100%;
+}
+
+.dropdown-list li {
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+
+#pfp-logo{width: 50px;}
+
+.material-symbols-outlined  {
+  display: inline-block;
+  padding: 5px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.material-symbols-outlined :hover {
+  background-color: #555;
+}
+.search-container {
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+
+}
+
+.search-input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 200px;
+  transition: width 0.4s ease-in-out;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: dodgerblue;
+}
+
+.search-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  background-color: transparent;
+  padding: 8px;
+  cursor: pointer;
+  transition: color 0.4s ease-in-out;
+}
+
+.search-button:hover {
+  color: dodgerblue;
+}
+
+.fa-search {
+  font-size: 16px;
+}
+#result{
+  background-color: white;
+  width:100%
+
+}
+#result a{
+  color: black;
+  text-decoration: none;
+  
+}
+hr{
+  border-bottom: 2px solid;
+  width:100%
+}
+#message {
+  display:none;
+  background: white;
+  text-align: left;
+  width: 70%; /* Set the input width to 100% */
+  padding: 10px; /* Add some padding */
+  margin-left: 10%;
+  
+ 
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+}

@@ -6,20 +6,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CPK</title>
     <link rel="stylesheet" href="https://educpk.github.io/style/style.css">
+    <link rel="stylesheet" href="style/login.css">
     <link rel="shortcut icon" href="https://educpk.github.io/image (1).png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
 </head>
 <body>
+    <style>
+        body {
+      background-color: #212121;
+      color: #FFF;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 4em;
+      margin: 0;
+      padding: 0;
+    }
+
+    p {
+      font-size: 1.5em;
+      margin-bottom: 30px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .emoji {
+      font-size: 6em;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #4CAF50;
+      color: #FFF;
+      text-decoration: none;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #45a049;
+    }
+    </style>
     <div class="loader">
         <img src="img/load-gif.gif" alt="" srcset="">
     </div>
     <!--template-->
     <!--NAVE-BAR-->
     <nav class="CPK-template-element-nav">
-        <a href="https://educpk.github.io/" class="CPK-template-element-a" id="home">Home</a>
-        <a href="https://educpk.github.io/#about" class="CPK-template-element-a">About</a>
-        <a href="https://EDUCPK.github.io/projects/web/Version2/create/" class="CPK-template-element-a">Web</a>
+        <a href="https://educpk.github.io/" class="CPK-template-element-a" id="home"><span class="material-symbols-outlined">
+            home
+            </span></a>
+            <div id="searchDiv">
+              <div class="search-container">
+                  <input type="text" placeholder="Search..." class="search-input" id="search">
+                  <button type="submit" class="search-button" id="search_button">
+                      &#x1F50D;
+                  </button>
+                  
+                  <script src="script/db/searchengine.js"></script>
+              </div>  
+              <div id="result">
+  
+              </div>
+          </div>
         
+        <a href="https://EDUCPK.github.io/projects/web/Version2/create/" class="CPK-template-element-a"><span class="material-symbols-outlined">
+            new_window
+            </span></a>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <!-- Add the Firebase JavaScript SDK -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+        
+        <!-- Add other Firebase SDKs if necessary (e.g., firebase-auth, firebase-storage, etc.) -->
+
+        <script src="/script/db/login.js" type="module"></script>
+        <script src="script/db/firebasedbinfo.js"></script>
+        <div class="login-button"id="loginsignup">
+            
+            
+            <div id="login" >
+                <p>Login/signup</p>
+            </div>
+        </div>
     </nav>
     <style>
         .CPK-TEMPLATE-MIDDLE{
@@ -27,11 +109,12 @@
             text-align: center;
         }
     </style>
-    <div class="CPK-TEMPLATE-MIDDLE">
-        <h1 class="CPK-template-element-header">OOPS!</h1>
-        <p>Page Not found</p>
-        
-    </div>
+    <div class="container">
+        <h1>404</h1>
+        <p>Oops! Page not found</p>
+        <div class="emoji">😕</div>
+        <a href="/" class="button">Go back to Home</a>
+      </div>
     </div>
     <script src="https://educpk.github.io/script/main.js"></script>
     <!--END-->

@@ -37,9 +37,13 @@ body{position: relative;    background-color: rgb(13, 68, 116);
     font-size: x-large;
 
 }
-textarea{
+textarea, input{
     background-color: rgb(10, 51, 87);
     color:white;
     border:5px;
+}
+.swal2-popup{
+    background-color: rgb(50, 110, 163);
+    color:white
 }
 button{cursor: pointer;}

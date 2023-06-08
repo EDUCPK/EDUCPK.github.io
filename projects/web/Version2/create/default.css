@@ -1,0 +1,115 @@
+.login-button {
+    background-color: #4CAF50; /* Green background color */
+    border: none; /* Remove borders */
+    color: white; /* White text color */
+    text-align: center; /* Center text */
+    display: inline-block; /* Make it an inline element */
+    font-size: 16px; /* Font size */
+    transition-duration: 0.4s; /* Transition effect duration */
+    cursor: pointer; /* Add cursor on hover */
+    text-decoration: none; /* Remove underline */
+    margin-left: 20%;
+    cursor: pointer;
+    width: 200px
+  }
+  
+  .login-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
+  .login-button:active {
+    background-color: #3e8e41; /* Dark green on click */
+  }
+
+
+  .form-container {
+    margin: 0 auto; /* Center the form container horizontally */
+    padding: 20px; /* Add some padding */
+
+  }
+  
+  .form-container h2 {
+    text-align: center; /* Center the heading */
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    display: flex; /* Add some spacing between form groups */
+  }
+  
+  .form-group label {
+    display: block; /* Display labels as blocks */
+    font-weight: bold; /* Bold label text */
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="password"],
+  .form-group input[type="email"] {
+    width: 80%; /* Set the input width to 100% */
+    padding: 10px; /* Add some padding */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 4px; /* Add border radius */
+  }
+  
+  .form-group button {
+    background-color: #4CAF50; /* Green background color */
+    border: none; /* Remove borders */
+    color: white; /* White text color */
+    text-align: center; /* Center text */
+    display: inline-block; /* Make it an inline element */
+    font-size: 16px; /* Font size */
+    padding: 10px 24px; /* Padding */
+    transition-duration: 0.4s; /* Transition effect duration */
+    cursor: pointer; /* Add cursor on hover */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .form-group button:hover, .dropdown-list li:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
+  .form-group button:active {
+    background-color: #3e8e41; /* Dark green on click */
+  }
+  #registerform, #loginform{
+    background-color: #f2f2f2; /* Light gray background color */
+    border: 1px solid #ccc; /* Add a border */
+    width:100%;
+  }
+  #registerform{margin-left: 10%;}
+  .swal2-popup{
+    width: 100% !important;
+  }
+  .error{
+    background-color: rgba(255, 0, 0, 0.212);
+    width:50%;
+    margin-left: 25%;
+    visibility: hidden;
+  }
+  .dropdown {
+  position: relative;
+  display: inline-block;
+  width:100%;
+}
+
+
+
+.dropdown-list {
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #54c758;
+  border-top: none;
+  display: none;
+  width: 100%;
+}
+
+.dropdown-list li {
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+.swal2-popup input{
+  font-size: 20px;
+}

@@ -1,0 +1,27 @@
+#container{
+    width:80%;
+    margin-left: 10%;
+    margin-top: 5%;
+    padding: 2%;
+}
+#post {
+    border: 5px solid #ccc;
+    padding: 20px;
+    width:100%;
+    border-radius: 25px;
+    margin-bottom: 5%;
+    cursor: pointer;
+}
+
+#post iframe{
+    margin-top: 2%;
+    border-radius: 25px;
+}
+#post a{
+    text-decoration: none;
+    color: black;
+}
+#post:hover {
+    transform: scale(1.1);
+  }
+  

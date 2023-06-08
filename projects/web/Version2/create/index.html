@@ -8,12 +8,18 @@
     <link rel="shortcut icon" href="https://educpk.github.io/image (1).png" type="image/x-icon">
 
     <link rel="stylesheet" href="https://educpk.github.io/style/style.css">
+    <link rel="stylesheet" href="default.css">
     <title>CPK | web</title>
 
 </head>
 
 <body>
-    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="../../../../script/db/firebasedbinfo.js"></script>]
+    <script src="https://educpk.github.io/script/2023/web/script.js"></script>
+    <script src="./script.js" type="module"></script>
     <div class="loader">
         <img src="https:/EDUCPK.github.io/projects/img/load-gif.gif" alt="" srcset="">
     </div>
@@ -55,15 +61,12 @@
     </script>
     <!--NAVE-BAR-->
     
-    <nav class="CPK-template-element-nav">
-        <a href="https://educpk.github.io/" class="CPK-template-element-a" id="home">Home</a>
-        <a href="https://educpk.github.io/#about" class="CPK-template-element-a">About</a>
-        <a href="https://EDUCPK.github.io/projects/web/Version2/create/" class="CPK-template-element-a">Web</a>
-        
-    </nav>
-    <nav class="CPK-template-element-nav" id="nav" style="display: flex;">
-        <button style="margin-right: 20%;" onclick="short()">Keyboard shortcut</button>
 
+    <nav class="CPK-template-element-nav" id="nav" style="display: flex;">
+        <button onclick="short()">Keyboard shortcut</button>
+
+        <button style="margin-left: 5%; margin-right: 15%; width: 10%" id="share">Share</button>
+        
         <div class="mode" style="margin-right: 0;  padding:10px;">
 
             <style>
@@ -153,6 +156,7 @@
             </div>
         </div>
         <div class="part2">
+            <p>File name:</p>
             <input type="text" id="Name" value="Untitled-1" placeholder="File name">
 
             <script>
@@ -186,6 +190,7 @@
                     }
                 }
             </script>
+            
         </div>
 
     </nav>
@@ -335,16 +340,7 @@
                                 }else{
                                     if(e.key.toLowerCase()=="escape"){
                                         document.getElementById("shortcuts").style.visibility="hidden";
-                                    }else{
-                                        if (er.style.visibility =="hidden"){
-                                            er.style.visibility="visible";
-                                        }else{
-                                            er.style.visibility="hidden";
-                                        }
-                                        document.getElementById("shortcuts").style.visibility="hidden";
-                                        
                                     }
-                                    
                                     
 
                                 };
